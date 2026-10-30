@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CUPORA — Qo'lda yasalgan premium cuplar</title>
+  <meta name="description" content="CUPORA — qo'lda yasalgan keramika, shisha va chinni cuplar do'koni. Har bir qultum — san'at.">
+  <link rel="icon" type="svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader-cup">
+      <div class="loader-steam"><span></span><span></span><span></span></div>
+      <div class="loader-body"><div class="loader-fill"></div></div>
+      <div class="loader-handle"></div>
+    </div>
+    <p class="loader-text">CUPORA</p>
+  </div>
+
+  <div class="progress" id="progress"></div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <img src="favicon.svg" alt="CUPORA">
+        <span>CUPORA</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav-link active">Bosh sahifa</a>
+        <a href="#collection" class="nav-link">Kolleksiya</a>
+        <a href="#about" class="nav-link">Biz haqimizda</a>
+        <a href="#builder" class="nav-link">Yaratish</a>
+        <a href="#gallery" class="nav-link">Galereya</a>
+        <a href="#reviews" class="nav-link">Fikrlar</a>
+        <a href="#contact" class="nav-link">Aloqa</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Qidirish">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Savat">
+          <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="burger" id="burger" aria-label="Menyu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay">
+    <button class="close-x" id="searchClose" aria-label="Yopish">&times;</button>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cup nomini yozing...">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-bg" style="background-image: url('hero.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="tag hero-anim" style="--d: .1s">Qo'lda yasalgan · 2026 kolleksiya</span>
+      <h1 class="hero-title hero-anim" style="--d: .25s">Har bir qultum<br><em>san'at asari</em></h1>
+      <p class="hero-text hero-anim" style="--d: .4s">CUPORA ustalari loydan, shishadan va chinnidan sizning ertalabki qahvangiz uchun mukammal cup yaratadi. Issiqlikni saqlaydi, qo'lga yoqimli, ko'zni quvontiradi.</p>
+      <div class="hero-buttons hero-anim" style="--d: .55s">
+        <a href="#collection" class="btn btn-primary">Kolleksiyani ko'rish
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#builder" class="btn btn-ghost">O'z cupingizni yarating</a>
+      </div>
+      <div class="hero-stats hero-anim" style="--d: .7s">
+        <div><strong data-count="12000">0</strong><span>Mamnun mijoz</span></div>
+        <div><strong data-count="48">0</strong><span>Noyob dizayn</span></div>
+        <div><strong data-count="9">0</strong><span>Yillik tajriba</span></div>
+      </div>
+    </div>
+    <a href="#features" class="scroll-down" aria-label="Pastga"><span></span></a>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Keramika</span><i>✦</i><span>Shisha</span><i>✦</i><span>Chinni</span><i>✦</i><span>Espresso</span><i>✦</i><span>Latte</span><i>✦</i><span>Matcha</span><i>✦</i><span>Kakao</span><i>✦</i>
+      <span>Keramika</span><i>✦</i><span>Shisha</span><i>✦</i><span>Chinni</span><i>✦</i><span>Espresso</span><i>✦</i><span>Latte</span><i>✦</i><span>Matcha</span><i>✦</i><span>Kakao</span><i>✦</i>
+    </div>
+  </div>
+
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="tag">Nega aynan CUPORA</span>
+        <h2>Oddiy cup emas — <em>kundalik marosim</em></h2>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg></div>
+          <h3>Tabiiy loy</h3>
+          <p>Faqat ekologik toza, zararsiz materiallardan foydalanamiz.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Issiqlikni saqlaydi</h3>
+          <p>Qalin devorlar ichimlikni 40 daqiqagacha iliq saqlaydi.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 20c4-1 6-4 7-8M20 4c-6 0-10 3-11 8 5-1 8-3 11-8z"/></svg></div>
+          <h3>Qo'lda yasalgan</h3>
+          <p>Har bir cup noyob — ikkita bir xil nusxa topilmaydi.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
+          <h3>Tez yetkazish</h3>
+          <p>Toshkent bo'ylab 24 soatda, viloyatlarga 3 kunda.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collection" id="collection">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="tag">Kolleksiya</span>
+        <h2>Sevimli <em>cupingizni</em> tanlang</h2>
+        <p>Keramikadan shishagacha — har bir ta'b va kayfiyat uchun.</p>
+      </div>
+      <div class="filters reveal" id="filters">
+        <button class="filter active" data-filter="all">Hammasi</button>
+        <button class="filter" data-filter="keramika">Keramika</button>
+        <button class="filter" data-filter="shisha">Shisha</button>
+        <button class="filter" data-filter="chinni">Chinni</button>
+      </div>
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <img src="workshop.jpg" alt="Usta loydan cup yasamoqda" loading="lazy">
+        <div class="about-badge">
+          <strong>100%</strong>
+          <span>Qo'l mehnati</span>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <span class="tag">Biz haqimizda</span>
+        <h2>Loydan tug'ilgan <em>hikoya</em></h2>
+        <p>CUPORA 2017-yilda kichik ustaxonada boshlangan. Bugun bizning jamoamiz 20 dan ortiq usta va dizaynerdan iborat. Har bir cup kulolchilik charxida shakllanadi, ikki marta pishiriladi va qo'lda sirlanadi.</p>
+        <ul class="about-list">
+          <li>1250°C da pishirilgan mustahkam keramika</li>
+          <li>Mikroto'lqinli pech va idish yuvish mashinasiga mos</li>
+          <li>Har bir buyurtmaga sovg'a qadoq</li>
+        </ul>
+        <div class="about-counters">
+          <div><strong data-count="20">0</strong><span>Usta</span></div>
+          <div><strong data-count="65000">0</strong><span>Yasalgan cup</span></div>
+          <div><strong data-count="14">0</strong><span>Viloyat</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="tag">Jarayon</span>
+        <h2>Cup qanday <em>tug'iladi</em></h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><span class="step-num">01</span><h3>Loy tayyorlash</h3><p>Tabiiy loy tozalanadi va yumshatiladi.</p></div>
+        <div class="step reveal"><span class="step-num">02</span><h3>Shakl berish</h3><p>Usta charxda cupga shakl beradi.</p></div>
+        <div class="step reveal"><span class="step-num">03</span><h3>Pishirish</h3><p>Ikki bosqichda yuqori haroratda pishiriladi.</p></div>
+        <div class="step reveal"><span class="step-num">04</span><h3>Sirlash</h3><p>Qo'lda rang beriladi va yaltiratiladi.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section builder" id="builder">
+    <div class="container builder-grid">
+      <div class="builder-preview reveal">
+        <div class="preview-stage">
+          <div class="preview-steam"><span></span><span></span><span></span></div>
+          <div class="preview-cup" id="previewCup">
+            <div class="preview-body"><span class="preview-text" id="previewText">CUPORA</span></div>
+            <div class="preview-handle"></div>
+          </div>
+          <div class="preview-shadow"></div>
+        </div>
+      </div>
+      <div class="builder-form reveal">
+        <span class="tag">Konstruktor</span>
+        <h2>O'z <em>cupingizni</em> yarating</h2>
+        <p>Rang, o'lcham va yozuvni tanlang — biz uni siz uchun qo'lda yasaymiz.</p>
+        <div class="builder-group">
+          <label>Rang</label>
+          <div class="colors" id="colors">
+            <button class="color active" data-color="#1c1a19" data-name="Ko'mir" style="--c: #1c1a19"></button>
+            <button class="color" data-color="#efe6d8" data-name="Krem" style="--c: #efe6d8"></button>
+            <button class="color" data-color="#b5522d" data-name="Terrakota" style="--c: #b5522d"></button>
+            <button class="color" data-color="#4f7a4a" data-name="Jade" style="--c: #4f7a4a"></button>
+            <button class="color" data-color="#1f2f5c" data-name="Tun" style="--c: #1f2f5c"></button>
+          </div>
+        </div>
+        <div class="builder-group">
+          <label>O'lcham</label>
+          <div class="sizes" id="sizes">
+            <button class="size" data-size="0.8" data-price="0" data-name="S · 150 ml">S</button>
+            <button class="size active" data-size="1" data-price="20000" data-name="M · 300 ml">M</button>
+            <button class="size" data-size="1.15" data-price="40000" data-name="L · 450 ml">L</button>
+          </div>
+        </div>
+        <div class="builder-group">
+          <label for="engrave">Yozuv (12 belgigacha)</label>
+          <input type="text" id="engrave" maxlength="12" placeholder="Ismingiz">
+        </div>
+        <div class="builder-total">
+          <div><span>Narxi</span><strong id="builderPrice">109 000 so'm</strong></div>
+          <button class="btn btn-primary" id="builderAdd">Savatga qo'shish</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="tag">Galereya</span>
+        <h2>Ilhom <em>lahzalari</em></h2>
+      </div>
+      <div class="gallery-grid">
+        <button class="g-item g-wide reveal" data-index="0"><img src="hero.jpg" alt="Qora keramika cup" loading="lazy"><span>Tungi espresso</span></button>
+        <button class="g-item reveal" data-index="1"><img src="cup-4.jpg" alt="Matcha cup" loading="lazy"><span>Matcha marosimi</span></button>
+        <button class="g-item g-tall reveal" data-index="2"><img src="cup-6.jpg" alt="Kakao mug" loading="lazy"><span>Qishki kakao</span></button>
+        <button class="g-item reveal" data-index="3"><img src="cup-1.jpg" alt="Latte cup" loading="lazy"><span>Latte art</span></button>
+        <button class="g-item reveal" data-index="4"><img src="cup-5.jpg" alt="Chinni choy cup" loading="lazy"><span>Limonli choy</span></button>
+        <button class="g-item reveal" data-index="5"><img src="workshop.jpg" alt="Ustaxona" loading="lazy"><span>Ustaxonamiz</span></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close-x" id="lbClose" aria-label="Yopish">&times;</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Oldingi">&#8249;</button>
+    <figure>
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Keyingi">&#8250;</button>
+  </div>
+
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="tag">Fikrlar</span>
+        <h2>Mijozlarimiz <em>nima deydi</em></h2>
+      </div>
+      <div class="slider reveal">
+        <div class="slides" id="slides">
+          <div class="slide">
+            <div class="stars">★★★★★</div>
+            <p>"Ertalabki qahvam endi butunlay boshqacha. Cup qo'lda juda yoqimli, issiqlikni uzoq saqlaydi."</p>
+            <div class="author"><span class="avatar">D</span><div><strong>Dilnoza R.</strong><small>Toshkent</small></div></div>
+          </div>
+          <div class="slide">
+            <div class="stars">★★★★★</div>
+            <p>"Ismim yozilgan cupni sovg'aga oldim — qadoqlash ham ajoyib. Rahmat, CUPORA!"</p>
+            <div class="author"><span class="avatar">J</span><div><strong>Jasur T.</strong><small>Samarqand</small></div></div>
+          </div>
+          <div class="slide">
+            <div class="stars">★★★★★</div>
+            <p>"Matcha cup juda chiroyli, har kuni foydalanaman. Yetkazib berish bir kunda bo'ldi."</p>
+            <div class="author"><span class="avatar">M</span><div><strong>Madina K.</strong><small>Buxoro</small></div></div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevSlide" aria-label="Oldingi">&#8592;</button>
+          <div class="dots" id="dots"></div>
+          <button class="slider-btn" id="nextSlide" aria-label="Keyingi">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq">
+    <div class="container faq-grid">
+      <div class="section-head left reveal">
+        <span class="tag">Savollar</span>
+        <h2>Ko'p beriladigan <em>savollar</em></h2>
+        <p>Javob topmadingizmi? Bizga yozing — 15 daqiqada javob beramiz.</p>
+        <a href="#contact" class="btn btn-outline">Savol berish</a>
+      </div>
+      <div class="accordion reveal" id="accordion">
+        <div class="acc-item">
+          <button class="acc-head">Cuplarni idish yuvish mashinasida yuvsa bo'ladimi?<span>+</span></button>
+          <div class="acc-body"><p>Ha, barcha keramika va chinni cuplarimiz idish yuvish mashinasi va mikroto'lqinli pechga mos.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Yetkazib berish qancha vaqt oladi?<span>+</span></button>
+          <div class="acc-body"><p>Toshkent bo'ylab 24 soat ichida, boshqa viloyatlarga 2–3 ish kunida yetkazamiz.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Shaxsiy yozuvli cup qancha vaqtda tayyor bo'ladi?<span>+</span></button>
+          <div class="acc-body"><p>Shaxsiy buyurtmalar 5–7 kun ichida tayyorlanadi, chunki har biri qo'lda yasaladi.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Qaytarish mumkinmi?<span>+</span></button>
+          <div class="acc-body"><p>14 kun ichida ishlatilmagan mahsulotni to'liq qaytarib, pulingizni olishingiz mumkin.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <span class="tag">Aloqa</span>
+        <h2>Keling, <em>tanishaylik</em></h2>
+        <p>Ustaxonamizga tashrif buyuring yoki xabar qoldiring.</p>
+        <ul>
+          <li><b>Manzil</b><span>Toshkent, Yunusobod tumani, Amir Temur ko'chasi 108</span></li>
+          <li><b>Telefon</b><a href="tel:+998901234567">+998 90 123 45 67</a></li>
+          <li><b>Email</b><a href="mailto:salom@cupora.uz">salom@cupora.uz</a></li>
+          <li><b>Ish vaqti</b><span>Har kuni 09:00 — 21:00</span></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <input type="text" id="cName" placeholder=" " required>
+          <label for="cName">Ismingiz</label>
+          <small></small>
+        </div>
+        <div class="field">
+          <input type="tel" id="cPhone" placeholder=" " required>
+          <label for="cPhone">Telefon raqam</label>
+          <small></small>
+        </div>
+        <div class="field">
+          <textarea id="cMsg" rows="4" placeholder=" " required></textarea>
+          <label for="cMsg">Xabaringiz</label>
+          <small></small>
+        </div>
+        <button type="submit" class="btn btn-primary full">Yuborish</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="container newsletter-inner reveal">
+      <div>
+        <h2>10% chegirma <em>birinchi buyurtmaga</em></h2>
+        <p>Yangi kolleksiyalar va maxsus takliflardan birinchilardan bo'lib xabardor bo'ling.</p>
+      </div>
+      <form class="news-form" id="newsForm">
+        <input type="email" id="newsEmail" placeholder="Email manzilingiz">
+        <button type="submit" class="btn btn-dark">Obuna bo'lish</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo"><img src="favicon.svg" alt="CUPORA"><span>CUPORA</span></a>
+        <p>Qo'lda yasalgan premium cuplar. Har bir qultum — san'at.</p>
+        <div class="socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="m21 4-18 7 6 2 2 6 3-4 5 4z"/></svg></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Do'kon</h4>
+        <a href="#collection" class="footer-filter" data-filter="keramika">Keramika</a>
+        <a href="#collection" class="footer-filter" data-filter="shisha">Shisha</a>
+        <a href="#collection" class="footer-filter" data-filter="chinni">Chinni</a>
+        <a href="#builder">Konstruktor</a>
+      </div>
+      <div>
+        <h4>Kompaniya</h4>
+        <a href="#about">Biz haqimizda</a>
+        <a href="#gallery">Galereya</a>
+        <a href="#reviews">Fikrlar</a>
+        <a href="#contact">Aloqa</a>
+      </div>
+      <div>
+        <h4>Aloqa</h4>
+        <a href="tel:+998901234567">+998 90 123 45 67</a>
+        <a href="mailto:salom@cupora.uz">salom@cupora.uz</a>
+        <span>Toshkent, O'zbekiston</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> CUPORA. Barcha huquqlar himoyalangan.</span>
+      <a href="#home">Yuqoriga ↑</a>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="backdrop"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-head">
+      <h3>Savatingiz</h3>
+      <button class="close-x" id="drawerClose" aria-label="Yopish">&times;</button>
+    </div>
+    <div class="drawer-items" id="drawerItems"></div>
+    <div class="drawer-foot">
+      <div class="drawer-total"><span>Jami</span><strong id="cartTotal">0 so'm</strong></div>
+      <button class="btn btn-primary full" id="checkoutBtn">Buyurtma berish</button>
+      <button class="btn-link" id="clearCart">Savatni tozalash</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="quickModal">
+    <div class="modal-card">
+      <button class="close-x" data-close aria-label="Yopish">&times;</button>
+      <div class="quick-grid">
+        <img id="qImg" src="" alt="">
+        <div>
+          <span class="tag" id="qCat"></span>
+          <h3 id="qName"></h3>
+          <p id="qDesc"></p>
+          <strong class="q-price" id="qPrice"></strong>
+          <div class="qty">
+            <button id="qMinus">−</button>
+            <span id="qQty">1</span>
+            <button id="qPlus">+</button>
+          </div>
+          <button class="btn btn-primary full" id="qAdd">Savatga qo'shish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="successModal">
+    <div class="modal-card success">
+      <div class="success-icon">✓</div>
+      <h3>Buyurtmangiz qabul qilindi!</h3>
+      <p>Tez orada operatorimiz siz bilan bog'lanadi. CUPORA ni tanlaganingiz uchun rahmat.</p>
+      <button class="btn btn-primary" data-close>Ajoyib</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <button class="to-top" id="toTop" aria-label="Yuqoriga">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
